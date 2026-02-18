@@ -9,7 +9,7 @@ public class Copy  implements java.io.Serializable {
 	private Book book;
 	private LocalDateTime dateOfAcquisition;
 
-	Copy(Book book) {
+	public Copy(Book book) {
 		this.book = book;
 		this.dateOfAcquisition = LocalDateTime.now();
 	}

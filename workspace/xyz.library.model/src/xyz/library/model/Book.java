@@ -6,8 +6,9 @@ public class Book implements java.io.Serializable {
 
 	private String title;
 	private Person author;
-	// private String isbn;
-	// etc. (date, keywords)
+	// TODO: isbn;
+	// TODO: date
+	// TODO: keywords, etc.
 
 	public Book(String title, Person author) {
 		this.title = title;
