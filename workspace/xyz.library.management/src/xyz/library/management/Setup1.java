@@ -14,12 +14,14 @@ public class Setup1 {
 		Person bob = chatillon.addBorrower(new Person("Bob", "0606070809"));
 		Book midsummer = chatillon.addBook(new Book("A Midsummer Night's Dream", new Person("William Shakespeare")));
 		Book amisInconnus = chatillon.addBook(new Book("Les Amis inconnus", new Person("Jules Supervielle")));
-		Copy copy1 = chatillon.addCopy(new Copy(midsummer));
+		Copy _copy1 = chatillon.addCopy(new Copy(midsummer));
 		Copy copy2 = chatillon.addCopy(new Copy(midsummer));
-		Copy copy3 = chatillon.addCopy(new Copy(midsummer));
+		Copy _copy3 = chatillon.addCopy(new Copy(midsummer));
 		Copy copy4 = chatillon.addCopy(new Copy(amisInconnus));
 		Copy copy5 = chatillon.addCopy(new Copy(amisInconnus));
-		chatillon.addLoan(new Loan(amisInconnus, bob));
+		chatillon.addLoan(new Loan(copy2, bob));
+		chatillon.addLoan(new Loan(copy4, bob)); // TODO: think about Bob borrowing twice the same book
+		chatillon.addLoan(new Loan(copy5, al));
 		return chatillon;
 	}
 
