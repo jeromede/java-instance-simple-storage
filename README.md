@@ -24,5 +24,5 @@ It shows how it can be done for this simple library management system:
 * run `Scenario1`: it will create objects and save them in a `.ser` file
 * run `Scenario2`: it will read the objects from a `.ser` file and trace them on the console.
 
-Now,pply the same pattern to your problem to solve!
+Now, apply the same pattern to your problem to solve!
 
