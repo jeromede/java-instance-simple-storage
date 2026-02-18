@@ -6,26 +6,26 @@ public class Loan implements java.io.Serializable {
 
 	private static final long serialVersionUID = 6734251319639827083L;
 
-	private Book book;
+	private Copy copy;
 	private LocalDateTime date;
 	private Person borrower;
 
-	Loan(Book book, Person borrower) {
-		this.book = book;
+	public Loan(Copy copy, Person borrower) {
+		this.copy = copy;
 		this.borrower = borrower;
 		this.date = LocalDateTime.now();
 	}
 
-	public Book getBook() {
-		return this.book;
-	}
-
-	public LocalDateTime getDate() {
-		return this.date;
+	public Copy getCopy() {
+		return this.copy;
 	}
 
 	public Person getBorrower() {
 		return this.borrower;
+	}
+
+	public LocalDateTime getDate() {
+		return this.date;
 	}
 
 }
