@@ -14,13 +14,15 @@ Then, try some simple scenarios and business rules to check you have the right o
 
 Just “tag” them as serializable and identify a _root_ class (`Library` in our case), one whose instance, by traversing links from one instance to another, allows all objects to be retrieved (in order to store them on disk).
 
+Note: the `serialVersionUID` is mandatory for a `Serializable` class; the IDE you are using should propose to create it automatically
+
 ## 3. Example code
 
 The example code is in an Eclipse [workspace](workspace).
- 
-It shows how it can be done for this simple library management system.
+It shows how it can be done for this simple library management system:
 
-Then, apply the same pattern to your problem to solve.
+* run `Scenario1`: it will create objects and save them in a `.ser` file
+* run `Scenario2`: it will read the objects from a `.ser` file and trace them on the console.
 
-Note: the `serialVersionUID` is mandatory for a `Serializable` class; the IDE you are using should propose an automatic generation for it.
+Now,pply the same pattern to your problem to solve!
 
