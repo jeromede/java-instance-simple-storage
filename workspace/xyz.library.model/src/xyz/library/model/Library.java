@@ -12,28 +12,40 @@ public class Library implements java.io.Serializable {
 	private HashSet<Person> borrowers = new HashSet<Person>();
 	private HashSet<Loan> loans = new HashSet<Loan>();
 
-	public Set<Book> addBook(Book book) {
+	public Book addBook(Book book) {
 		this.books.add(book);
-		return this.books;
-
+		return book;
 	}
 
-	public Set<Copy> addBook(Copy copy) {
+	public Copy addCopy(Copy copy) {
 		this.copies.add(copy);
-		return this.copies;
-
+		return copy;
 	}
 
-	public Set<Person> addBorrower(Person person) {
+	public Person addBorrower(Person person) {
 		this.borrowers.add(person);
-		return this.borrowers;
-
+		return person;
 	}
 
-	public Set<Loan> addLoan(Loan loan) {
+	public Loan addLoan(Loan loan) {
 		this.loans.add(loan);
-		return this.loans;
+		return loan;
+	}
 
+	public Set<Book> getBooks() {
+		return this.books;
+	}
+
+	public Set<Copy> getCopies() {
+		return this.copies;
+	}
+
+	public Set<Person> getBorrower() {
+		return this.borrowers;
+	}
+
+	public Set<Loan> getLoans() {
+		return this.loans;
 	}
 
 }
