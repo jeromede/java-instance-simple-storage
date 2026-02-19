@@ -10,11 +10,11 @@ Create a `model` package where to put all the business model classes. In library
 
 Then, try some simple scenarios and business rules to check you have the right objects and links. A book exists in several copies, and a person can borrow several books at the same time, maybe 5 max; as a librarian, you may want to keep track of how many times a given book copy has been borrowed; you may also want to keep track of how many times a given book has been borrowed (all its copies); etc.
 
-## 2. Write the code for the classes
+## 2. Code the classes
 
-Just “tag” them as serializable and identify a _root_ class (`Library` in our case), one whose instance, by traversing links from one instance to another, allows all objects to be retrieved (in order to store them on disk).
+Just “tag” the business classes as serializable and identify a _root_ class (`Library` in our case), one whose instance, by traversing links from one instance to another, allows all objects to be retrieved (in order to store them on disk).
 
-Note: the `serialVersionUID` is mandatory for a `Serializable` class; the IDE you are using should propose to create it automatically
+Note: the `serialVersionUID` is mandatory for a `Serializable` class; the IDE you are using should be able to help you create this attribute automatically
 
 ## 3. Example code
 
@@ -25,4 +25,10 @@ It shows how it can be done for this simple library management system:
 * run `Scenario2`: it will read the objects from a `.ser` file and trace them on the console.
 
 Now, apply the same pattern to your problem to solve!
+
+## Limitations
+
+This pattern involves writing and reading all objects in memory before storing the network of objects in a single file on the disk.
+
+Of course, our example of a library management system would typically be implemented using a database.
 
