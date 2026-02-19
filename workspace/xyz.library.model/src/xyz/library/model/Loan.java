@@ -9,6 +9,7 @@ public class Loan implements java.io.Serializable {
 	private Copy copy;
 	private LocalDateTime date;
 	private Person borrower;
+	// TODO: return copy (end date on loan)
 
 	public Loan(Copy copy, Person borrower) {
 		this.copy = copy;
