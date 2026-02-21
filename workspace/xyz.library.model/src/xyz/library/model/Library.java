@@ -52,6 +52,8 @@ public class Library implements java.io.Serializable {
 	public Set<Loan> getLoans() {
 		return this.loans;
 	}
+
+// TODO: make this part generic and separate from the entity class
 	
 	public void serialize(String filename) {
 		try {
